@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('inicio');
 })->name('dashboard');
+
+require __DIR__.'/propietario.php';
+require __DIR__.'/stock.php';
+require __DIR__.'/comercial.php';
+require __DIR__.'/proveedores.php';
+require __DIR__.'/clientes.php';

@@ -1,0 +1,33 @@
+.vib:hover{
+
+    animation-duration: 0.5s;
+    animation-name: slidein;
+
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 3px;
+     
+    }
+  
+    to {
+      margin-left: 0px;
+    }
+  }
+
+.vib-t:hover{
+
+    background-color: #FDF304;
+    color:black !important;
+    font-size: large;
+
+}
+
+.nav-link:link{
+
+  background-color: 
+
+}
+
+  
