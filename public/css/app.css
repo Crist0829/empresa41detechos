@@ -27443,7 +27443,7 @@ label {
   border: 0;
 }
 .nav-pills .nav-link:hover {
-  color: #201A15;
+  color: black !important;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {

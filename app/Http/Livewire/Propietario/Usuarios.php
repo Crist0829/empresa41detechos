@@ -19,6 +19,12 @@ class Usuarios extends Component
         $this->resetPage();
     }
 
+    public function eliminarUsuario($id){
+        User::destroy($id);
+        $this->resetPage();
+        session()->flash('eliminado', '¡Usuario eliminado correctamente!');
+    }
+
     public function render()
     {
         return view('livewire.propietario.usuarios', ['users' => User::where('name', 'like', '%'.$this->search.'%')->paginate(10)]);

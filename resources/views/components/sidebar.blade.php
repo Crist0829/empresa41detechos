@@ -8,7 +8,6 @@
       </button>
   </div>
 </nav>
-
       <nav id="sidebarMenu" class="sidebar d-md-block bg-dark text-white collapse" data-simplebar>
 <div class="sidebar-inner px-4 pt-3">
   <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -36,7 +35,6 @@
         </span>
       </a>
     </li>
-
     <li class="nav-item {{$gestion ?? ''}} vib">
       <span
         class="nav-link collapsed  d-flex justify-content-between align-items-center"
@@ -47,10 +45,9 @@
         </span> 
         <span class="link-arrow"><span class="fas fa-chevron-right"></span></span>
       </span>
-      <div class="multi-level collapse "
+      <div class="multi-level collapse {{$showGestion ?? ''}}"
         role="list" id="gestion" aria-expanded="false">
         <ul class="flex-column nav">
-
           <li class="nav-item {{$stock ?? ''}}">
             <a class="nav-link" href="{{route('stock')}}">
               <span class="sidebar-text">Stock</span>
@@ -87,7 +84,7 @@
         </span> 
         <span class="link-arrow"><span class="fas fa-chevron-right"></span></span>
       </span>
-      <div class="multi-level collapse "
+      <div class="multi-level collapse {{$showPlataforma ?? ''}}"
         role="list" id="users" aria-expanded="false">
         <ul class="flex-column nav">
 

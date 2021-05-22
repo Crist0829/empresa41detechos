@@ -41,7 +41,7 @@ class Create extends Component
         $articulo->stock_minimo = $this->stock_minimo;
         $articulo->save();
         
-        session()->flash('mensaje', '¡Artículo agregado correctamente!');
+        session()->flash('agregado', '¡Artículo agregado correctamente!');
 
     }
 

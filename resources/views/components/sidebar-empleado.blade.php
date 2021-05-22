@@ -47,7 +47,7 @@
           </span> 
           <span class="link-arrow"><span class="fas fa-chevron-right"></span></span>
         </span>
-        <div class="multi-level collapse "
+        <div class="multi-level collapse {{$showGestion ?? ''}}"
           role="list" id="gestion" aria-expanded="false">
           <ul class="flex-column nav">
   

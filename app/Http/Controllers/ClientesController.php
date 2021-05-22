@@ -23,7 +23,7 @@ class ClientesController extends Controller
      */
     public function create()
     {
-        //
+        return view('clientes.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class ClientesController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('clientes.show', ['id' => $id]);
     }
 
     /**
@@ -80,5 +80,9 @@ class ClientesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function trabajoShow($id){
+        return view('clientes.trabajos.show', ["id" => $id]);
     }
 }

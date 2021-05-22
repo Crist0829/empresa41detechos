@@ -2,19 +2,29 @@
     <x-slot name="title">
         Gestión comercial
     </x-slot>
-    
     @switch(Auth::user()->rol)
         @case('propietario')
         <x-sidebar>
+            <x-slot name="showGestion">
+                show
+            </x-slot>
             <x-slot name='gestion'>
+                active
+            </x-slot>
+            <x-slot name="comercial">
                 active
             </x-slot>
         </x-sidebar>
             @break
         @case('empleado')
-
         <x-sidebar-empleado>
-            <x-slot name='inicio'>
+            <x-slot name="showGestion">
+                show
+            </x-slot>
+            <x-slot name='gestion'>
+                active
+            </x-slot>
+            <x-slot name="comercial">
                 active
             </x-slot>
         </x-sidebar-empleado>

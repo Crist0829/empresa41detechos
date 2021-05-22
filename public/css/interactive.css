@@ -16,11 +16,16 @@
     }
   }
 
+.vib-t2:hover{
+  
+    font-size: large;
+}
+
 .vib-t:hover{
 
-    background-color: #FDF304;
-    color:black !important;
-    font-size: large;
+  background-color: #FDF304;
+  color:black !important;
+  font-size: large;
 
 }
 

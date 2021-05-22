@@ -6,15 +6,26 @@
     @switch(Auth::user()->rol)
         @case('propietario')
         <x-sidebar>
+            <x-slot name="showGestion">
+                show
+            </x-slot>
             <x-slot name='gestion'>
+                active
+            </x-slot>
+            <x-slot name="comercial">
                 active
             </x-slot>
         </x-sidebar>
             @break
         @case('empleado')
-
         <x-sidebar-empleado>
-            <x-slot name='inicio'>
+            <x-slot name="showGestion">
+                show
+            </x-slot>
+            <x-slot name='gestion'>
+                active
+            </x-slot>
+            <x-slot name="comercial">
                 active
             </x-slot>
         </x-sidebar-empleado>
@@ -34,8 +45,13 @@
         <x-row>
             <div class='col-md-12'>
                 <h2 class="text-center text-white">Gestión comercal</h2>
-                <h4 class="text-center text-white">Remitos</h4>
-                <x-comercio.nav/>
+                <h4 class="text-center text-white">Generar remito</h4>
+                <x-comercio.nav>
+                    <x-slot name="remitos">
+                        active
+                    </x-slot>
+                </x-comercio.nav>
+                <livewire:comercio.remito/>
             </div>  
         </x-row>
 

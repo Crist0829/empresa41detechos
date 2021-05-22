@@ -23,7 +23,7 @@ class ProveedoresController extends Controller
      */
     public function create()
     {
-        //
+        return view('proveedores.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class ProveedoresController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('proveedores.show', ['id' => $id]);
     }
 
     /**
@@ -56,7 +56,7 @@ class ProveedoresController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
