@@ -17,8 +17,18 @@
   }
 
 .vib-t2:hover{
-  
     font-size: large;
+}
+
+.vib-t2.active{
+  font-size: large !important;
+  color:  #FDF304 !important;
+  background-color: #201A15 !important;
+}
+
+
+.vib-t2.active:hover{
+  color: white !important;
 }
 
 .vib-t:hover{
@@ -26,12 +36,6 @@
   background-color: #FDF304;
   color:black !important;
   font-size: large;
-
-}
-
-.nav-link:link{
-
-  background-color: 
 
 }
 
