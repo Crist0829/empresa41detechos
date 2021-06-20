@@ -32,11 +32,7 @@ class Croquis extends Component
     public function ocultarActualizarUbi(){
         $this->actualizar_croquis_ubicacion = false;
     }
-
-
-
     public function cargarCroquisTecho(){
-
         $this->validate([
             "croquis_techo" => 'image|max:4096',
         ],

@@ -58,7 +58,7 @@ class Presupuestos extends Component
 
         $presupuesto = Cotizacion::find($this->presupuestoid);
 
-        if(empty($this->logistica) && empty($this->comision) && empty($this->presio_total)){
+        if(empty($this->logistica) && empty($this->comision) && empty($this->precio_total)){
 
             session()->flash('noPresupuestoAct', '¡No has hecho ningún cambio!');
 
