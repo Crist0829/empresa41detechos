@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '7841edd32dee49171a29ff6a1ce981f0d0a90f2d',
+    'reference' => 'e5ec49a231220b282c3c88019d386baefb16bad0',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -231,12 +231,12 @@ private static $installed = array (
     ),
     'guzzlehttp/guzzle' => 
     array (
-      'pretty_version' => '7.2.0',
-      'version' => '7.2.0.0',
+      'pretty_version' => '7.3.0',
+      'version' => '7.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0aa74dfb41ae110835923ef10a9d803a22d50e79',
+      'reference' => '7008573787b430c1c1f650e3722d9bba59967628',
     ),
     'guzzlehttp/promises' => 
     array (
@@ -541,7 +541,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '7841edd32dee49171a29ff6a1ce981f0d0a90f2d',
+      'reference' => 'e5ec49a231220b282c3c88019d386baefb16bad0',
     ),
     'laravel/sail' => 
     array (

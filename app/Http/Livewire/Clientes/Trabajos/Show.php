@@ -7,6 +7,7 @@ use App\Models\Trabajo;
 use App\Models\Cliente;
 use App\Models\Orden;
 use App\Models\Cotizacion;
+use App\Models\Real;
 
 class Show extends Component
 {
@@ -111,15 +112,26 @@ class Show extends Component
                 "comision.required" => "Este campo es obligatorio"
             ]);
 
+        //----------------------------------------------------------//
         $presupuesto = new Cotizacion;
         $presupuesto->fecha_visita = $this->fecha_visita;
         $presupuesto->logistica = $this->logistica;
         $presupuesto->comision = $this->comision;
         $presupuesto->precio_total = 0;
         $presupuesto->trabajo_id = $this->trabajoid;
+
+        $presupuesto_real = new Real;
+        $presupuesto_real->fecha_visita = $this->fecha_visita;
+        $presupuesto_real->logistica = $this->logistica;
+        $presupuesto_real->comision = $this->comision;
+        $presupuesto_real->precio_total = 0;
+        $presupuesto_real->trabajo_id = $this->trabajoid;
+        
         $presupuesto->save();
+        $presupuesto_real->save();
         session()->flash('presupuestoCargado', '¡El presupuesto fue cargado correctamente!');
         return redirect('/clientes/trabajos/'.$this->trabajoid);
+        //---------------------------------------------------------//
 
     }
 

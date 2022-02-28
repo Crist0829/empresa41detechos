@@ -15,8 +15,10 @@
                                 <label for="email">Email</label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
-                                    <input type="email" class="form-control" placeholder="example@company.com" id="email" name = "email" autofocus required>
-                                </div>  
+                                    <input type="email"  placeholder="example@company.com" id="email" name = "email" autofocus required
+                                    @error('email') class="form-control is-invalid" @else class="form-control" @enderror>
+                                </div>
+                                @error('email') <p class="text-danger">{{$message}}</p> @enderror  
                             </div>
                             <!-- End of Form -->
                             <div class="form-group">
@@ -25,8 +27,10 @@
                                     <label for="password">Contraseña</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
-                                        <input type="password" placeholder="Password" class="form-control" id="password" name="password" required>
-                                    </div>  
+                                        <input type="password" placeholder="Password"  id="password" name="password" required
+                                        @error('password') class="form-control is-invalid" @else class="form-control" @enderror>>
+                                    </div>
+                                    @error('password') <p class="text-danger">{{$message}}</p> @enderror    
                                 </div>
                                 <!-- End of Form -->
                                 <div class="d-flex justify-content-between align-items-top mb-4">

@@ -36,6 +36,7 @@
                 </ul>
             </div>
         </div>
+    <!-- Notificaciones-->
         @if(session()->has('cargado'))
             <div class="d-flex flex-column align-items-center">
                 <div class="alert alert-tertiary alert-dismissible fade show col-md-8 mt-2" role="alert">
@@ -108,6 +109,8 @@
                 </div>
             </div>
         @endif
+        
+    <!-- Fin de las notificaciones -->
         @switch($activo)
             @case("orden_visita")
                 <div class="row d-flex flex-column align-items-center">

@@ -36,6 +36,7 @@
                                 Croquis de techo
                             </h3>
                             <div class="d-flex flex-column align-items-center m-3">
+                                <p></p>
                                 <figure class="rounded figure">
                                     <img src="{{asset("$orden_visita->croquis_techo")}}" alt="" class="rounded figure-img img-fluid">
                                 </figure>

@@ -42,7 +42,7 @@ class Croquis extends Component
         ]);
 
         $croquis_nombre = "croquisT_".$this->ordenid.".".$this->croquis_techo->extension();
-        $this->croquis_techo->storeAs('croquis', $croquis_nombre);
+        $this->croquis_techo->storeAs('public', $croquis_nombre);
         $orden = Orden::find($this->ordenid);
         $orden->techo_extension = $this->croquis_techo->extension();
         $orden->croquis_techo = Storage::url($croquis_nombre);
@@ -63,7 +63,7 @@ class Croquis extends Component
         ]);
 
         $croquis_nombre = "croquisU_".$this->ordenid.".".$this->croquis_ubicacion->extension();
-        $this->croquis_ubicacion->storeAs('croquis', $croquis_nombre);
+        $this->croquis_ubicacion->storeAs('public', $croquis_nombre);
         $orden = Orden::find($this->ordenid);
         $orden->ubicacion_extension = $this->croquis_ubicacion->extension();
         $orden->croquis_ubicacion = Storage::url($croquis_nombre);
@@ -84,9 +84,9 @@ class Croquis extends Component
             "croquis_techo.max" => "La imagen debe tener un tamaño máximo de 4MB"
         ]);
 
-        Storage::delete("croquis", "croquisT_".$this->orden_visita->id.".".$this->orden_visita->techo_extension);
+        Storage::delete("public/croquisT_".$this->orden_visita->id.".".$this->orden_visita->techo_extension);
         $croquis_nombre = "croquisT_".$this->ordenid.".".$this->croquis_techo->extension();
-        $this->croquis_techo->storeAs('croquis', $croquis_nombre);
+        $this->croquis_techo->storeAs('public', $croquis_nombre);
         $orden = Orden::find($this->ordenid);
         $orden->croquis_techo = Storage::url($croquis_nombre);
         $orden->techo_extension = $this->croquis_techo->extension();
@@ -106,9 +106,9 @@ class Croquis extends Component
             "croquis_ubicacion.max" => "La imagen debe tener un tamaño máximo de 4MB"
         ]);
 
-        Storage::delete("croquis", "croquisU_".$this->orden_visita->id.".".$this->orden_visita->ubicacion_extension);
+        Storage::delete("public/croquisU_".$this->orden_visita->id.".".$this->orden_visita->ubicacion_extension);
         $croquis_nombre = "croquisU_".$this->ordenid.".".$this->croquis_ubicacion->extension();
-        $this->croquis_ubicacion->storeAs('croquis', $croquis_nombre);
+        $this->croquis_ubicacion->storeAs('public', $croquis_nombre);
         $orden = Orden::find($this->ordenid);
         $orden->croquis_ubicacion = Storage::url($croquis_nombre);
         $orden->ubicacion_extension = $this->croquis_ubicacion->extension();
@@ -121,7 +121,7 @@ class Croquis extends Component
 
 
     public function eliminarCroquisTecho(){
-        Storage::delete("croquis", "croquisT_".$this->orden_visita->id.".".$this->orden_visita->techo_extension);
+        Storage::delete("public/croquisT_".$this->orden_visita->id.".".$this->orden_visita->techo_extension);
         $orden = Orden::find($this->ordenid);
         $orden->croquis_techo = null;
         $orden->techo_extension = null;
@@ -130,7 +130,7 @@ class Croquis extends Component
         return redirect('/clientes/trabajos/'.$this->orden_visita->trabajo_id);
     }
     public function eliminarCroquisUbi(){
-        Storage::delete("croquis", "croquisU_".$this->orden_visita->id.".".$this->orden_visita->techo_extension);
+        Storage::delete("public/croquisU_".$this->orden_visita->id.".".$this->orden_visita->ubicacion_extension);
         $orden = Orden::find($this->ordenid);
         $orden->croquis_ubicacion = null;
         $orden->ubicacion_extension = null;

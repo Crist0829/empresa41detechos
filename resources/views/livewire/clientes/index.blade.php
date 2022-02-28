@@ -56,7 +56,7 @@
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h2 class="text-center text-danger">Eliminar elemento</h2>
+                                                        <h2 class="text-center text-danger">Eliminar artículo</h2>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
